@@ -1,7 +1,10 @@
 "use strict";
 const userName = 'Ethan is cool';
-const buttonClick = document.querySelector('button');
-buttonClick.addEventListener('click', () => {
-    console.log('clicked');
-});
+const button = document.querySelector('button');
+function clickHandeler(message) {
+    console.log('hey bub' + message);
+}
+if (button) {
+    button.addEventListener('click', clickHandeler.bind(null, ' you a bitch'));
+}
 console.log(userName);

@@ -1,7 +1,12 @@
 const userName = 'Ethan is cool';
-const buttonClick = document.querySelector('button')!;
+const button = document.querySelector('button');
 
-buttonClick.addEventListener('click', () => {
-    console.log('clicked');
-})
+function clickHandeler(message: string) {
+    console.log('hey bub' + message)
+}
+
+if(button){
+    button.addEventListener('click', clickHandeler.bind(null, ' you a bitch'))
+}
+
 console.log(userName)
